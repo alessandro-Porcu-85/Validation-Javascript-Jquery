@@ -28,14 +28,15 @@ $(function() {
             /[a-z]/.test(value) &&
             /[A-Z]/.test(value)
     }, 'La contraseña debe tener al menos 6 caracteres y al menos un número o una letra capital.')
-    
-    
+
     $.validator.addMethod("lettersonly", function(value, element) {
         return this.optional(element) ||
             /^[a-z]+$/.test(value);
     }, 'Only alphabetical characters');
-    
-    
+
+
+
+
 
     $("#register-form").validate({
         rules: {
@@ -54,7 +55,7 @@ $(function() {
             },
             registrationcity: {
                 required: true,
-                lettersonly: true
+                //lettersonly: true
             },
             registrationstate: {
                 required: true,
